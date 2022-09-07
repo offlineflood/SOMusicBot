@@ -66,6 +66,47 @@ async def bilgi(_, message: Message):
          )
     )
 
+    
+    
+    
+
+@Client.on_callback_query(filters.regex("cbstart"))
+async def cbstart(_, query: CallbackQuery):
+    await query.edit_message_text(f"""**Salam {message.from_user.mention}. Mənim adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 ᴍᴜsiᴄ ʙᴏᴛ🎶](https://t.me/Ustamusicbot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam. @ustabots-dan dəsdək alaraq yaradılmışam. Qrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.**""",
+         reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "➕Qrupa Əlavə Et➕", url=f"https://t.me/Ustamusicbot?startgroup=true"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "Əmrlər 📚", callback_data= "cbbilgi"
+                    ),
+                    InlineKeyboardButton(
+                        "📑 Təkliflər", url="https://t.me/Nehmedov"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "Sahib💥", url="https://t.me/Nehmedov"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "Qrup 💬" , url="https://t.me/Bizim_Paytaxt"
+                    ),
+                    InlineKeyboardButton(
+                        "Usta Bots💡", url=f"https://t.me/ustabots"
+                    )
+                ]
+                
+           ]
+        )
+    )
+    
+    
 
 @Client.on_callback_query(filters.regex("cbbilgi"))
 async def cbbilgi(_, query: CallbackQuery):
