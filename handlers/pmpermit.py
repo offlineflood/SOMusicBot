@@ -18,7 +18,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Salam 🗣, Musiqi asistanı xidmətidir.botla bağlı @WerabliAnlar\n\n ❗️ qaydalar:\n - Sohbete icazə yoxdu.\n - məlumat ve Menyularım üçün qrubun sohbetinde **/bilgi** yazsanız. (Asistan sohbetinə bilgi yazmayın.) Musiqi menyularını öyrənə bilərsiniz. \n - İstənməyən postaya icazə verilmez \n\n 🚨 **Userbot Qrupunuza Qoşulmursa >> DƏVƏT QOŞULMA ÖZƏLLİYİ VE SƏS YÖNƏTİMİ ÖZƏLLİKLƏRİ VER YÖNETİCİ EDİN. <<**\n\n ⚠️ DİQQƏT: Burada bir mesaj göndərsəniz. Yöneticinin iletinizi göreceyi anlamına gəlir.\n - Şəxsi bilgiləri burada paylaşmayın. (Musiqi Botunu Xaiş Edirik Gizli Qrublara almayın.) 📚 Bilgi üçün [Sahibim 👨🏻‍💻](https://t.me/ismiyev95) 🇦🇿\n",
+                "Usta Musiqi asisstant şəxsidə msj göndərməyin. Bot hakında məlumat əldə edmək isdərsənisə sahiblə @Nehmedov əlaqə saxlayın ve bota group & şəxsid /help msj göndərin ətraglı məlumat bot & sahib bilir!\nBot: @Ustamusicbot\n Sahib: @Nehmedov \n Usta Bots: @ustabots",
             )
             return
  
@@ -32,11 +32,11 @@ async def bye(client: Client, message: Message):
         queryy = text[1]
         if queryy == "on":
             PMSET = True
-            await message.reply_text("PM İzin Etkin")
+            await message.reply_text("PM İcazəsi Aktivdir.")
             return
         if queryy == "off":
             PMSET = None
-            await message.reply_text("PM İzin Devre Dışı")
+            await message.reply_text("PM İcazəsi Deaktiv edilib.")
             return
 
 @USER.on_message(filters.text & filters.private & filters.me)        
@@ -44,7 +44,7 @@ async def autopmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("**Hey Userbot Yazışması artıq işləyir.**")
+        await message.reply_text("**Asisstant hesabı artıq msj yazmaq başladı...,Msj çox yazmayın rp xətası ola bilər, spam bildirişi ala bilərsiniz.**")
         return
     message.continue_propagation()    
     
@@ -53,7 +53,7 @@ async def pmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("Yaklaşık olarak PM")
+        await message.reply_text("Təxminən PM")
         return
     message.continue_propagation()    
     
@@ -63,6 +63,6 @@ async def rmpmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if chat_id in pchats:
         pchats.remove(chat_id)
-        await message.reply_text("Bu şekilde PM")
+        await message.reply_text("Bu yolla PM")
         return
     message.continue_propagation()
