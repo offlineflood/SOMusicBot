@@ -18,7 +18,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(command(["bul"]))
+@Client.on_message(command(["song"]))
 def bul(client, message):
 
     user_id = message.from_user.id
@@ -27,7 +27,7 @@ def bul(client, message):
 
     query = "".join(" " + str(i) for i in message.command[1:])
     print(query)
-    m = message.reply("🔎 Mahnı Axtarıram...")
+    m = message.reply("🔎 Musiqi Axtarılır...")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=5).to_dict()
@@ -45,17 +45,17 @@ def bul(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ Mahnı tapılmadı.\n\nBaşqa mahnı yazın, və ya mahnı adı düzgün deyil."
+            "❌ Musiqi tapılmadı!\n\nBaşqa musiqi adı daxil edin, və ya musiqi adını düzgün deyil!"
         )
         print(str(e))
         return
-    m.edit("`Mahnı Yüklənir, Zəhmət olmasa gözləyin...⏱`")
+    m.edit("`ℹ️Musiqi Yüklənir, Zəhmət olmasa gözləyin...`")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"☑️ **Mahnı adı**: [{title[:35]}]({link})\n🎬 **Mənbə**: YouTube\n⏱️ **Müddət**: `{duration}`\n👁‍🗨 **Baxış sayı**: `{views}`\n📤 **Tərəfindən**: @{BOT_USERNAME}"
+        rep = f"☑️ **Mahnı adı**: [{title[:35]}]({link})\n🎬 **Mənbə**: YouTube\n⏱️ **Vaxtı**: `{duration}`\n👁‍🗨 **Baxış sayı**: `{views}`\n📤 **Tərəfindən**: @{BOT_USERNAME}"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -80,7 +80,7 @@ def bul(client, message):
         print(e)
 
 @Client.on_message(
-    command(["vbul", "vsong"]) & ~filters.edited
+    command(["download"]) & ~filters.edited
 )
 async def vsong(client, message):
     ydl_opts = {
