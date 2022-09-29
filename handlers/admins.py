@@ -90,7 +90,7 @@ async def atla(_, message: Message):
 
 # Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim.
 # Gayet güzel çalışıyor. @ismiyev95 Tarafından Eklenmiştir. 
-@Client.on_message(command("ver") & other_filters)
+@Client.on_message(command("authority") & other_filters)
 @authorized_users_only
 async def authenticate(client, message):
     global admins
@@ -106,7 +106,7 @@ async def authenticate(client, message):
         await message.reply("🔰 İstifadəçi yetkilidir!")
 
 
-@Client.on_message(command("al") & other_filters)
+@Client.on_message(command("unauthorized") & other_filters)
 @authorized_users_only
 async def deautenticate(client, message):
     global admins
