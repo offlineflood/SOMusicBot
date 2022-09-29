@@ -8,7 +8,7 @@ from helpers.filters import command, other_filters2
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
-                "https://te.legra.ph/file/41a198522d38a8949f44a.jpg",
+                "https://te.legra.ph/file/6e7d20219471595061042.jpg",
                 caption=(f"""**Salam {message.from_user.mention}. Mənim adım [𝐒𝐎 𝐌𝐮𝐬𝐢𝐜 𝐁𝐨𝐭 🇦🇿](https://t.me/SOmusiqi_Bot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam.iQrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.**"""),
          reply_markup=InlineKeyboardMarkup(
             [
@@ -21,23 +21,23 @@ async def start(_, message: Message):
                     InlineKeyboardButton(
                         "Əmrlər 📚", callback_data= "cbbilgi"
                     ),
-                    InlineKeyboardButton(
-                        "📑 Təkliflər", url="https://t.me/emrelguseynovv"
-                    )
+                    #InlineKeyboardButton(
+                    #    "📑 Təkliflər", url="https://t.me/emrelguseynovv"
+                   # )
                 ],
  #               [
   #                  InlineKeyboardButton(
    #                     "Sahib💥", url="https://t.me/emrelguseynovv"
     #                )
      #           ],
-                #[
-                   # InlineKeyboardButton(
-                   #     "Qrup 💬" , url="https://t.me/SohbetOnlineAz"
-                  #  ),
-                 #   InlineKeyboardButton(
-                #        "Usta Bots💡", url=f"https://t.me/ustabots"
-               #     )
-              #  ]
+                 [
+                    InlineKeyboardButton(
+                        "Sahib💥", url="https://t.me/emrelguseynovv"
+                    ),
+                    InlineKeyboardButton(
+                        "Qrup 💬" , url="https://t.me/SohbetOnlineAz"
+                    )
+                ]
                 
            ]
         )
@@ -64,16 +64,15 @@ async def bilgi(_, message: Message):
     )
     
 #**Salam {message.from_user.mention}. Mənim adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 ᴍᴜsiᴄ ʙᴏᴛ🎶](https://t.me/Ustamusicbot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam. @ustabots-dan dəsdək alaraq yaradılmışam. Qrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.   
-@Client.on_callback_query(filters.regex("teklif"))
+@Client.on_callback_query(filters.regex("herkess"))
 async def herkess(_, query: CallbackQuery):
     await query.edit_message_text(f"""**Salam {message.from_user.mention}. Mənim adım [𝐒𝐎 𝐌𝐮𝐬𝐢𝐜 𝐁𝐨𝐭 🇦🇿](https://t.me/SOmusiqi_Bot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam. @ustabots-dan dəsdək alaraq yaradılmışam. Qrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.""",
     reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("➕Qrupa Əlavə Et➕", url=f"https://t.me/SOmusiqi_Bot?startgroup=true" )],
-             [InlineKeyboardButton("Əmrlər 📚", callback_data= "cbbilgi"),
-              InlineKeyboardButton("📑 Təkliflər", url="https://t.me/emrelguseynovv")],
+             [InlineKeyboardButton("Əmrlər 📚", callback_data= "cbbilgi")],
             # [InlineKeyboardButton("Sahib💥", url="https://t.me/emrelguseynovv")],
-             [InlineKeyboardButton("Qrup 💬" , url="https://t.me/SohbetOnlineAz")],]))
-           #   InlineKeyboardButton("Usta Bots💡", url=f"https://t.me/ustabots")]]))    
+             [InlineKeyboardButton("Sahib💥", url="https://t.me/emrelguseynovv")],]))
+              InlineKeyboardButton("Qrup 💬" , url="https://t.me/SohbetOnlineAz")]]))    
    
 @Client.on_callback_query(filters.regex("cbbilgi"))
 async def cbbilgi(_, query: CallbackQuery):
@@ -81,7 +80,7 @@ async def cbbilgi(_, query: CallbackQuery):
     reply_markup=InlineKeyboardMarkup(
       [[InlineKeyboardButton("Bot Əmrləri🤖",callback_data ="herkes"),
          InlineKeyboardButton("Admin Əmrləri👮",callback_data ="admin")],
-        [InlineKeyboardButton("◀️Geri", callback_data="teklif")]])) 
+        [InlineKeyboardButton("◀️Geri", callback_data="herkess")]])) 
 
 
 @Client.on_callback_query(filters.regex("herkes"))
