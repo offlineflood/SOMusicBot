@@ -198,11 +198,11 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("➕Qrupa Əlavə Et➕", url=f"https://t.me/Ustamusicbot?startgroup=true"),
+                InlineKeyboardButton("➕Qrupa Əlavə Et➕", url=f"https://t.me/SOmusiqi_Bot?startgroup=true"),
             ],
             [
-                InlineKeyboardButton("Qrup 💬" , url="https://t.me/Bizim_Paytaxt"),
-                InlineKeyboardButton("Usta Bots💡", url=f"https://t.me/ustabots"),
+                InlineKeyboardButton("Qrup 💬" , url="https://t.me/SohbetOnlineAz"),
+               # InlineKeyboardButton("Usta Bots💡", url=f"https://t.me/ustabots"),
             ],[
                 InlineKeyboardButton("✖️ Bağla", callback_data="cls"),
             ],
@@ -266,11 +266,11 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
              [
-                InlineKeyboardButton("➕Qrupa Əlavə Et➕", url=f"https://t.me/Ustamusicbot?startgroup=true"),
+                InlineKeyboardButton("➕Qrupa Əlavə Et➕", url=f"https://t.me/SOmusiqi_Bot?startgroup=true"),
             ],
             [
-                InlineKeyboardButton("Qrup 💬" , url="https://t.me/Bizim_Paytaxt"),
-                InlineKeyboardButton("Usta Bots💡", url=f"https://t.me/ustabots"),
+                InlineKeyboardButton("Qrup 💬" , url="https://t.me/SohbetOnlineAz"),
+              #  InlineKeyboardButton("Usta Bots💡", url=f"https://t.me/ustabots"),
             ],[
                 InlineKeyboardButton("✖️ Bağla", callback_data="cls"),
             ],
