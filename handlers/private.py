@@ -9,12 +9,12 @@ from helpers.filters import command, other_filters2
 async def start(_, message: Message):
                 await message.reply_photo(
                 "https://te.legra.ph/file/41a198522d38a8949f44a.jpg",
-                caption=(f"""**Salam {message.from_user.mention}. Mənim adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 ᴍᴜsiᴄ ʙᴏᴛ🎶](https://t.me/Ustamusicbot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam. @ustabots-dan dəsdək alaraq yaradılmışam. Qrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.**"""),
+                caption=(f"""**Salam {message.from_user.mention}. Mənim adım [𝐒𝐎 𝐌𝐮𝐬𝐢𝐜 𝐁𝐨𝐭 🇦🇿](https://t.me/SOmusiqi_Bot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam. @ustabots-dan dəsdək alaraq yaradılmışam. Qrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕Qrupa Əlavə Et➕", url=f"https://t.me/Ustamusicbot?startgroup=true"
+                        "➕Qrupa Əlavə Et➕", url=f"https://t.me/SOmusiqi_Bot?startgroup=true"
                     )
                 ],
                 [
@@ -25,14 +25,14 @@ async def start(_, message: Message):
                         "📑 Təkliflər", url="https://t.me/Nehmedov"
                     )
                 ],
+ #               [
+  #                  InlineKeyboardButton(
+   #                     "Sahib💥", url="https://t.me/emrelguseynovv"
+    #                )
+     #           ],
                 [
                     InlineKeyboardButton(
-                        "Sahib💥", url="https://t.me/Nehmedov"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "Qrup 💬" , url="https://t.me/Bizim_Paytaxt"
+                        "Qrup 💬" , url="https://t.me/SohbetOnlineAz"
                     ),
                     InlineKeyboardButton(
                         "Usta Bots💡", url=f"https://t.me/ustabots"
@@ -52,12 +52,12 @@ async def bilgi(_, message: Message):
              [
                  [
                      InlineKeyboardButton(
-                         "↬Bota Get↫", url="https://t.me/Ustamusicbot?start=start"),                     
+                         "↬Bota Get↫", url="https://t.me/SOmusiqi_Bot?start=start"),                     
                      InlineKeyboardButton(
-                         "📑 Təkliflər", url="https://t.me/Nehmedov")
+                         "📑 Təkliflər", url="https://t.me/emrelguseynovv")
                  ],[
                      InlineKeyboardButton(
-                         "➕Qrupa Əlavə Et➕", url=f"https://t.me/Ustamusicbot?startgroup=true")
+                         "➕Qrupa Əlavə Et➕", url=f"https://t.me/SOmusiqi_Bot?startgroup=true")
                  ]
              ]
          )
@@ -66,13 +66,13 @@ async def bilgi(_, message: Message):
 #**Salam {message.from_user.mention}. Mənim adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 ᴍᴜsiᴄ ʙᴏᴛ🎶](https://t.me/Ustamusicbot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam. @ustabots-dan dəsdək alaraq yaradılmışam. Qrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.   
 @Client.on_callback_query(filters.regex("teklif"))
 async def herkess(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {message.from_user.mention}. Mənim adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 ᴍᴜsiᴄ ʙᴏᴛ🎶](https://t.me/Ustamusicbot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam. @ustabots-dan dəsdək alaraq yaradılmışam. Qrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.""",
+    await query.edit_message_text(f"""**Salam {message.from_user.mention}. Mənim adım [𝐒𝐎 𝐌𝐮𝐬𝐢𝐜 𝐁𝐨𝐭 🇦🇿](https://t.me/SOmusiqi_Bot)\n\nℹ️Mənim {bot} bəzi faydalı xüsusiyyətləri olan teleqram musiqi botuyam. @ustabots-dan dəsdək alaraq yaradılmışam. Qrup'lara əlavə edərək musiqi dinləyə bilərsiniz.\n\n⚡️Məni qruplarınıza əlavə etməkdən çəkinməyin.""",
     reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("➕Qrupa Əlavə Et➕", url=f"https://t.me/Ustamusicbot?startgroup=true" )],
+            [[InlineKeyboardButton("➕Qrupa Əlavə Et➕", url=f"https://t.me/SOmusiqi_Bot?startgroup=true" )],
              [InlineKeyboardButton("Əmrlər 📚", callback_data= "cbbilgi"),
-              InlineKeyboardButton("📑 Təkliflər", url="https://t.me/Nehmedov")],
-             [InlineKeyboardButton("Sahib💥", url="https://t.me/Nehmedov")],
-             [InlineKeyboardButton("Qrup 💬" , url="https://t.me/Bizim_Paytaxt"),
+              InlineKeyboardButton("📑 Təkliflər", url="https://t.me/emrelguseynovv")],
+            # [InlineKeyboardButton("Sahib💥", url="https://t.me/emrelguseynovv")],
+             [InlineKeyboardButton("Qrup 💬" , url="https://t.me/SohbetOnlineAz"),
               InlineKeyboardButton("Usta Bots💡", url=f"https://t.me/ustabots")]]))    
    
 @Client.on_callback_query(filters.regex("cbbilgi"))
