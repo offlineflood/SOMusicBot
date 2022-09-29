@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "ASQMusicAssistant"
+        user.first_name = "SOmusic_asisstant"
     usar = user
     wew = usar.id
     try:
@@ -127,7 +127,7 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**ℹ️𓄂𝙰𝚂𝚀|🇦🇿 𝓜𝓾𝓼𝓲𝓬 𝓐𝓼𝓲𝓼𝓼𝓽𝓪𝓷𝓽🦅 bu qrupa musiqi oxumaq üçün daxil oldu...🥳**")
+                        message.chat.id, "**𝓜𝓾𝓼𝓲𝓬 𝓐𝓼𝓲𝓼𝓼𝓽𝓪𝓷𝓽🦅 bu qrupa musiqi oxumaq üçün daxil oldu...🥳**")
 
                 except UserAlreadyParticipant:
                     pass
