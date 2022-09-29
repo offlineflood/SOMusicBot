@@ -71,7 +71,7 @@ async def herkess(_, query: CallbackQuery):
             [[InlineKeyboardButton("➕Qrupa Əlavə Et➕", url=f"https://t.me/SOmusiqi_Bot?startgroup=true" )],
              [InlineKeyboardButton("Əmrlər 📚", callback_data= "cbbilgi")],
             # [InlineKeyboardButton("Sahib💥", url="https://t.me/emrelguseynovv")],
-             [InlineKeyboardButton("Sahib💥", url="https://t.me/emrelguseynovv")],]))
+             [InlineKeyboardButton("Sahib💥", url="https://t.me/emrelguseynovv"),
               InlineKeyboardButton("Qrup 💬" , url="https://t.me/SohbetOnlineAz")]]))    
    
 @Client.on_callback_query(filters.regex("cbbilgi"))
