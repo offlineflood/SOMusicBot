@@ -1,6 +1,7 @@
-# ykamusicbot
-
-
+#SOMusicBot 
+#Owners
+Mucve & Yuni & Hassan
+[DegGixM](https://t.me/DegGixM)
 
 
 <b>HEROKU'LA DAĞIDIN</b>
