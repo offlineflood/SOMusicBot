@@ -1,5 +1,4 @@
-# Telegramda yani ben boş işler müdürü :) <> @ismiyev95 Tarafından düzenlenen ufak çaplı proje. 
-import os
+ import os
 import requests
 import aiohttp
 import yt_dlp
